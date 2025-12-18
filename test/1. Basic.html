@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!-- saved from url=(0067)https://nhn.github.io/tui.grid/latest/examples/example01-basic.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>1. Basic</title>
+    <link rel="stylesheet" type="text/css" href="./1. Basic_files/tui-example-style.css">
+    <link rel="stylesheet" type="text/css" href="./1. Basic_files/tui-grid.css">
+    <script>var errorLogs=[];window.onerror=function(o,r,e,n){errorLogs.push({message:o,source:r,lineno:e,colno:n})};</script>
+   
+  <body>
+    <div class="description">
+      You can see the tutorial
+      <a href="https://github.com/nhn/tui.grid/blob/master/packages/toast-ui.grid/docs/en/getting-started.md" target="_blank">here</a>
+      <br>
+      <strong>The example code can be slower than your environment because the code is transpiled by babel-standalone in runtime.</strong>
+    </div>
+    
+    <div class="code-html contents">
+      <div id="grid">
+	   </div>
+    </div>
+  
+  <script src="./1. Basic_files/babel.min.js.다운로드"></script>
+  <script type="text/javascript" src=" C:\workspace\tui.grid-master1\tui.grid-master\packages\toast-ui.grid\dist/tui-grid.js"></script>
+  <script type="text/javascript" src="./1. Basic_files/basic-dummy.js.다운로드"></script>
+  <script type="text/babel" class="code-js">
+    const grid = new tui.Grid({
+      el: document.getElementById('grid'),
+      data: gridData,
+      scrollX: false,
+      scrollY: false,
+      columns: [
+        {
+          header: 'Name',
+          name: 'name'
+        },
+        {
+          header: 'Artist',
+          name: 'artist'
+        },
+        {
+          header: 'Type',
+          name: 'type'
+        },
+        {
+          header: 'Release',
+          name: 'release'
+        },
+        {
+          header: 'Genre',
+          name: 'genre'
+        }
+      ]
+    });
+  </script>
+
+</body></html>
