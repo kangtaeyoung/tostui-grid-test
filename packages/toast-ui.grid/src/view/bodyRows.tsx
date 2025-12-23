@@ -27,15 +27,18 @@ class BodyRowsComp extends Component<Props> {
   private getVisibleStateOfRows({ rawData, rows }: Pick<Props, 'rows' | 'rawData'>) {
     const rowKeys = rows.map(({ rowKey }) => rowKey);
 
-    return rawData.reduce((acc, { rowKey, _attributes }) => {
-      if (!rowKeys.includes(rowKey)) {
+    return rawData.reduce(
+      (acc, { rowKey, _attributes }) => {
+        if (!rowKeys.includes(rowKey)) {
+          return acc;
+        }
+
+        acc[rowKey] = !_attributes.tree?.hidden;
+
         return acc;
-      }
-
-      acc[rowKey] = !_attributes.tree?.hidden;
-
-      return acc;
-    }, {} as Record<RowKey, boolean>);
+      },
+      {} as Record<RowKey, boolean>
+    );
   }
 
   public shouldComponentUpdate(nextProps: Props) {

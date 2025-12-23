@@ -436,8 +436,7 @@ describe('row height', () => {
       {
         col1: 'something very long text to exceed with of the cell',
         col2: 'something very long text to\nexceed with of the cell',
-        col3:
-          'grid         example\ngrid newline example\n\ngrid newline example\n\ngrid newline example\n\n',
+        col3: 'grid         example\ngrid newline example\n\ngrid newline example\n\ngrid newline example\n\n',
         col4: 'grid         example\ngrid newline example\n\ngrid newline example\n\n',
         col5: 'grid         example\ngrid newline example\n\ngrid newline example\n\n',
       },
@@ -470,8 +469,7 @@ describe('row height', () => {
       {
         col1: 'something very long text to exceed with of the cell',
         col2: 'something very long text to\nexceed with of the cell',
-        col3:
-          'grid         example\ngrid newline example\n\ngrid newline example\n\ngrid newline example\n\n',
+        col3: 'grid         example\ngrid newline example\n\ngrid newline example\n\ngrid newline example\n\n',
         col4: 'grid         example\ngrid newline example\n\ngrid newline example\n\n',
         col5: 'grid         example\ngrid newline example\n\ngrid newline example\n\n',
       },

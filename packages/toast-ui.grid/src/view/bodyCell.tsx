@@ -123,14 +123,8 @@ export class BodyCellComp extends Component<Props> {
   };
 
   private calculateRowHeight(props: Props) {
-    const {
-      rowIndex,
-      columnInfo,
-      refreshRowHeight,
-      defaultRowHeight,
-      dispatch,
-      cellBorderWidth,
-    } = props;
+    const { rowIndex, columnInfo, refreshRowHeight, defaultRowHeight, dispatch, cellBorderWidth } =
+      props;
 
     if (refreshRowHeight) {
       // In Preact, the componentDidMount is called before the DOM elements are actually mounted.

@@ -89,13 +89,8 @@ export class FilterLayerInnerComp extends Component<Props> {
   }
 
   public render() {
-    const {
-      columnInfo,
-      renderSecondFilter,
-      dispatch,
-      currentColumnActive,
-      filterState,
-    } = this.props;
+    const { columnInfo, renderSecondFilter, dispatch, currentColumnActive, filterState } =
+      this.props;
     const { showApplyBtn, showClearBtn } = columnInfo.filter!;
     const { left } = this.state;
 

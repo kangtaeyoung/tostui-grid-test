@@ -44,16 +44,14 @@ function getExportDataAndColumnsAndOptions(store: Store, options?: OptExport) {
     exports: { excelCompatibilityMode },
   } = store;
 
-  const {
-    targetColumnHeaders: columnHeaders,
-    targetColumnNames: columnNames,
-  } = getNamesAndHeadersOfColumnsByOptions(
+  const { targetColumnHeaders: columnHeaders, targetColumnNames: columnNames } =
+    getNamesAndHeadersOfColumnsByOptions(
     column,
     options?.columnNames || [],
     includeHiddenColumns,
     onlySelected,
     originalRange
-  );
+    );
 
   const data: string[][] = getTargetData(
     store,
@@ -177,13 +175,8 @@ function exportCallback(
 }
 
 export function execExport(store: Store, format: ExportFormat, options?: OptExport) {
-  const {
-    data,
-    columnHeaders,
-    columnNames,
-    exportOptions,
-    excelCompatibilityMode,
-  } = getExportDataAndColumnsAndOptions(store, options);
+  const { data, columnHeaders, columnNames, exportOptions, excelCompatibilityMode } =
+    getExportDataAndColumnsAndOptions(store, options);
   const { includeHeader, delimiter, fileName } = exportOptions;
   const { column } = store;
 

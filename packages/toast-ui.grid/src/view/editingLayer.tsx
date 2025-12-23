@@ -304,14 +304,8 @@ export const EditingLayer = connect<StoreProps, OwnProps>((store, { side }) => {
     moveDirectionOnEnter,
   } = focus;
   const { scrollTop, scrollLeft } = viewport;
-  const {
-    cellBorderWidth,
-    bodyHeight,
-    width,
-    scrollXHeight,
-    scrollYWidth,
-    headerHeight,
-  } = dimension;
+  const { cellBorderWidth, bodyHeight, width, scrollXHeight, scrollYWidth, headerHeight } =
+    dimension;
 
   return {
     grid: getInstance(id),

@@ -98,12 +98,7 @@ export function setColumnWidth(
 
 export function setColumns(store: Store, optColumns: OptColumn[]) {
   const { column, data, id } = store;
-  const {
-    columnOptions,
-    copyOptions,
-    treeColumnOptions,
-    rowHeaders,
-  } = column.dataForColumnCreation;
+  const { columnOptions, copyOptions, treeColumnOptions, rowHeaders } = column.dataForColumnCreation;
 
   const relationColumns = optColumns.reduce(
     (acc: string[], { relations = [] }) =>

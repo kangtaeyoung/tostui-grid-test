@@ -58,6 +58,6 @@ karma.conf.local.js
 *.vim
 .\#*
 .vscode/
-dist/
+dist1/
 .env
 !_*/dist/

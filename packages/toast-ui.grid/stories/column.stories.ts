@@ -118,8 +118,7 @@ export const ellipsis = () => {
     {
       name: 'Beautiful Lies',
       artist: 'Birdy',
-      type:
-        'grid         example\ngrid newline example\n\ngrid newline example\n\ngrid newline example\n\n',
+      type: 'grid         example\ngrid newline example\n\ngrid newline example\n\ngrid newline example\n\n',
     },
   ];
   const { el } = createGrid({

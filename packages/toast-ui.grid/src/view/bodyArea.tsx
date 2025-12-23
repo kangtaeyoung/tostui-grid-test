@@ -121,9 +121,8 @@ class BodyAreaComp extends Component<Props> {
     const { deltaX, deltaY } = ev;
 
     if (scrollX || scrollY) {
-      const { canScrollUp, canScrollDown, canScrollRight, canScrollLeft } = isElementScrollable(
-        currentTarget
-      );
+      const { canScrollUp, canScrollDown, canScrollRight, canScrollLeft } =
+        isElementScrollable(currentTarget);
 
       if (
         (canScrollUp && deltaY < 0) ||
@@ -508,15 +507,8 @@ export const BodyArea = connect<StoreProps, OwnProps>((store, { side }) => {
   const { totalRowHeight } = rowCoords;
   const { totalColumnWidth, widths } = columnCoords;
   const { bodyHeight, scrollXHeight, scrollX, scrollY, cellBorderWidth } = dimension;
-  const {
-    offsetLeft,
-    offsetTop,
-    scrollTop,
-    scrollLeft,
-    dummyRowCount,
-    colRange,
-    columns,
-  } = viewport;
+  const { offsetLeft, offsetTop, scrollTop, scrollLeft, dummyRowCount, colRange, columns } =
+    viewport;
 
   const visibleWidths = side === 'R' ? widths[side].slice(...colRange) : widths[side];
   const visibleColumns = side === 'R' ? columns : column.visibleColumnsBySideWithRowHeader[side];

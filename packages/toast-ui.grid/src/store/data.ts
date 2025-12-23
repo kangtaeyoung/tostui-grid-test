@@ -505,16 +505,18 @@ function applyFilterToRawData(
 }
 
 function createPageOptions(userPageOptions: PageOptions, rawData: Row[]) {
-  const pageOptions = (isEmpty(userPageOptions)
-    ? {}
-    : {
-        useClient: false,
-        page: 1,
-        perPage: DEFAULT_PER_PAGE,
-        type: 'pagination',
-        ...userPageOptions,
-        totalCount: userPageOptions.useClient ? rawData.length : userPageOptions.totalCount!,
-      }) as Required<PageOptions>;
+  const pageOptions = (
+    isEmpty(userPageOptions)
+      ? {}
+      : {
+          useClient: false,
+          page: 1,
+          perPage: DEFAULT_PER_PAGE,
+          type: 'pagination',
+          ...userPageOptions,
+          totalCount: userPageOptions.useClient ? rawData.length : userPageOptions.totalCount!,
+        }
+  ) as Required<PageOptions>;
 
   if (pageOptions.type === 'pagination') {
     pageOptions.position = pageOptions.position || 'bottom';

@@ -182,9 +182,9 @@ function validateCustomValidator(
 
   unobservedInvoke(() => {
     const result = validatorFn(value, originRow, columnName);
-    const { valid, meta } = (isBoolean(result)
-      ? { valid: result }
-      : result) as CustomValidatorResultWithMeta;
+    const { valid, meta } = (
+      isBoolean(result) ? { valid: result } : result
+    ) as CustomValidatorResultWithMeta;
 
     if (!valid) {
       invalidStates.push({ code: 'VALIDATOR_FN', ...meta });

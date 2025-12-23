@@ -309,9 +309,9 @@ export function emitAfterFilter(store: Store, eventType: EventType, columnName: 
   const { id } = store;
   const eventBus = getEventBus(id);
   // @TODO: `filter` event will be deprecated. This event is replaced with `afterFilter` event
-  const eventTypes = (eventType === 'afterFilter'
-    ? ['afterFilter', 'filter']
-    : ['afterUnfilter']) as EventType[];
+  const eventTypes = (
+    eventType === 'afterFilter' ? ['afterFilter', 'filter'] : ['afterUnfilter']
+  ) as EventType[];
 
   eventTypes.forEach((type) => {
     const gridEvent = createFilterEvent(store, type, { columnName });

@@ -28,15 +28,8 @@ export class ColumnHeader extends Component<Props> {
 
   private getElement(type: string) {
     const { columnInfo } = this.props;
-    const {
-      name,
-      sortable,
-      sortingType,
-      filter,
-      headerRenderer,
-      header,
-      customHeader,
-    } = columnInfo;
+    const { name, sortable, sortingType, filter, headerRenderer, header, customHeader } =
+      columnInfo;
 
     if (headerRenderer) {
       return null;

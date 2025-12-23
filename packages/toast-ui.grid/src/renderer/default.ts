@@ -3,11 +3,8 @@ import { cls } from '../helper/dom';
 import { isFunction } from '../helper/common';
 import { sanitize } from 'dompurify';
 
-type IfEquals<X, Y, A = X, B = never> = (<T>() => T extends X ? 0 : 1) extends <T>() => T extends Y
-  ? 0
-  : 1
-  ? A
-  : B;
+type IfEquals<X, Y, A = X, B = never> =
+  (<T>() => T extends X ? 0 : 1) extends <T>() => T extends Y ? 0 : 1 ? A : B;
 type WritableKeys<T> = {
   [P in keyof T]-?: IfEquals<{ [Q in P]: T[P] }, { -readonly [Q in P]: T[P] }, P>;
 }[keyof T];

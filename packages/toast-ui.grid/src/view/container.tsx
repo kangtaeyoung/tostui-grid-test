@@ -394,7 +394,7 @@ export class ContainerComp extends Component<Props> {
         {...attrs}
         style={style}
         class={cls('container', [showLeftSide, 'show-lside-area'])}
-        onMouseDown={this.handleMouseDown}
+        // onMouseDown={this.handleMouseDown}
         onDblClick={this.handleDblClick}
         onClick={this.handleClick}
         onMouseOut={this.handleMouseout}

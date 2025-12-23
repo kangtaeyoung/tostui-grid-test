@@ -14,7 +14,7 @@ import { updateRowSpan } from './rowSpan';
 
 function createSortedViewData(rawData: Row[]) {
   return rawData.map(
-    ({ rowKey, sortKey, uniqueKey }) => ({ rowKey, sortKey, uniqueKey } as ViewRow)
+    ({ rowKey, sortKey, uniqueKey }) => ({ rowKey, sortKey, uniqueKey }) as ViewRow
   );
 }
 
