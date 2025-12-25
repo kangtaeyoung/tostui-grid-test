@@ -12,7 +12,7 @@ type DimensionOption = {
   domWidth: number;
   summaryPosition?: SummaryPosition;
   headerHeight: number;
-  settingicon?: boolean;
+  settingicon?:Function;
 } & Pick<
   OptGrid,
   | 'width'
@@ -40,7 +40,7 @@ export function create({
   summaryHeight = 0,
   summaryPosition = 'bottom',
   headerHeight = 40,
-  settingicon = false,
+  settingicon = undefined
 }: DimensionOption) {
   const bodyHeightVal = typeof bodyHeight === 'number' ? bodyHeight : 0;
 

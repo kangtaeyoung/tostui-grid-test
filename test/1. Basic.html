@@ -42,7 +42,9 @@
       scrollX: false,
       scrollY: true,
       bodyHeight: 400,
-      settingicon: false,
+      settingicon: (e)=>{
+        alert('Setting icon clicked!', e);
+      } ,
       rowHeaders: ['rowNum', 'checkbox'],
       columns: [
         {

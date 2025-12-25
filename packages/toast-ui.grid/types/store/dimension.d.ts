@@ -21,7 +21,7 @@ export interface Dimension {
   cellBorderWidth: number;
   scrollX: boolean;
   scrollY: boolean;
-  settingicon: boolean;
+  settingicon: Function;
   readonly contentsWidth: number;
   readonly frozenBorderWidth: number;
   readonly scrollXHeight: number;

@@ -55,7 +55,7 @@ interface StoreProps {
   focusedColumnName: string | null;
   offsetLeft: number;
   offsetTop: number;
-  settingicon: boolean;
+  settingicon: Function;
 }
 
 interface TouchEventInfo {
@@ -431,7 +431,10 @@ export class ContainerComp extends Component<Props> {
         {pageOptions.position === 'bottom' && <Pagination />}
         <FilterLayer />
         <ContextMenu />
-        {settingicon && <div className={'tui-setting'}></div>}
+        
+        {
+        // @ts-ignore
+        settingicon && <div className={'tui-setting'} onClick={settingicon}></div>}
       </div>
     );
   }

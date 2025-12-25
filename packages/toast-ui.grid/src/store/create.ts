@@ -48,7 +48,7 @@ export function createStore(id: number, options: OptGrid): Store {
     contextMenu: createMenuGroups,
     moveDirectionOnEnter,
     exportOptions = {},
-    settingicon = false,
+    settingicon =  options.settingicon,
   } = options;
   const { frozenBorderWidth } = columnOptions;
   const { height: summaryHeight, position: summaryPosition } = summaryOptions;
