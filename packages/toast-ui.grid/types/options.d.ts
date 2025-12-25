@@ -120,6 +120,7 @@ export interface OptGrid {
   contextMenu?: CreateMenuGroups;
   moveDirectionOnEnter?: EnterCommandType;
   exportOptions?: Exports;
+  settingicon?: boolean;
 }
 
 export type OptRowProp = CellValue | RecursivePartial<RowAttributes & RowSpanAttribute> | OptRow[];

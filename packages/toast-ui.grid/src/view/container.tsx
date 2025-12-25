@@ -55,6 +55,7 @@ interface StoreProps {
   focusedColumnName: string | null;
   offsetLeft: number;
   offsetTop: number;
+  settingicon: boolean;
 }
 
 interface TouchEventInfo {
@@ -385,10 +386,11 @@ export class ContainerComp extends Component<Props> {
       scrollX,
       scrollY,
       pageOptions,
+      settingicon
     } = this.props;
     const style = { width: autoWidth ? '100%' : width };
     const attrs = { [dataAttr.GRID_ID]: gridId };
-
+    console.info('container render',this. props);
     return (
       <div
         {...attrs}
@@ -429,6 +431,7 @@ export class ContainerComp extends Component<Props> {
         {pageOptions.position === 'bottom' && <Pagination />}
         <FilterLayer />
         <ContextMenu />
+        {settingicon && <div className={'tui-setting'}></div>}
       </div>
     );
   }
@@ -454,6 +457,7 @@ export const Container = connect<StoreProps, OwnProps>(
     scrollX: dimension.scrollX,
     scrollY: dimension.scrollY,
     renderState,
+    settingicon: dimension.settingicon,
     focusedRowKey: focus.rowKey,
     focusedColumnName: focus.columnName,
     offsetLeft: dimension.offsetLeft,

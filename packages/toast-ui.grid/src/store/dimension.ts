@@ -12,6 +12,7 @@ type DimensionOption = {
   domWidth: number;
   summaryPosition?: SummaryPosition;
   headerHeight: number;
+  settingicon?: boolean;
 } & Pick<
   OptGrid,
   | 'width'
@@ -39,6 +40,7 @@ export function create({
   summaryHeight = 0,
   summaryPosition = 'bottom',
   headerHeight = 40,
+  settingicon = false,
 }: DimensionOption) {
   const bodyHeightVal = typeof bodyHeight === 'number' ? bodyHeight : 0;
 
@@ -63,7 +65,7 @@ export function create({
     scrollbarWidth: 17,
     tableBorderWidth: 1,
     cellBorderWidth: 1,
-
+    settingicon: settingicon,
     get scrollYWidth() {
       return this.scrollY ? this.scrollbarWidth : 0;
     },

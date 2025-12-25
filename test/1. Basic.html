@@ -23,12 +23,27 @@
   <script src="./1. Basic_files/babel.min.js.다운로드"></script>
   <script type="text/javascript" src=" C:\workspace\tui.grid-master1\tui.grid-master\packages\toast-ui.grid\dist/tui-grid.js"></script>
   <script type="text/javascript" src="./1. Basic_files/basic-dummy.js.다운로드"></script>
+  <style>
+   .tui-setting {
+     position: absolute;
+     top: 10px;
+     right: 10px;
+     width: 32px;
+     height: 32px;
+     background-image: url('https://www.svgrepo.com/show/529867/settings.svg');
+     background-size: cover;
+     cursor: pointer;
+   }
+    </style>
   <script type="text/babel" class="code-js">
     const grid = new tui.Grid({
       el: document.getElementById('grid'),
       data: gridData,
       scrollX: false,
-      scrollY: false,
+      scrollY: true,
+      bodyHeight: 400,
+      settingicon: false,
+      rowHeaders: ['rowNum', 'checkbox'],
       columns: [
         {
           header: 'Name',

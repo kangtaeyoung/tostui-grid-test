@@ -1,6 +1,6 @@
 /*!
  * TOAST UI Grid
- * @version 4.21.22 | Tue Dec 23 2025
+ * @version 4.21.22 | Thu Dec 25 2025
  * @author NHN Cloud. FE Development Lab
  * @license MIT
  */
@@ -13429,10 +13429,10 @@ var lazyObservable_1 = __webpack_require__(31);
 var validation_1 = __webpack_require__(27);
 function createStore(id, options) {
     validation_1.createNewValidationMap(id);
-    var el = options.el, width = options.width, rowHeight = options.rowHeight, bodyHeight = options.bodyHeight, heightResizable = options.heightResizable, minRowHeight = options.minRowHeight, minBodyHeight = options.minBodyHeight, _a = options.columnOptions, columnOptions = _a === void 0 ? {} : _a, keyColumnName = options.keyColumnName, _b = options.rowHeaders, rowHeaders = _b === void 0 ? [] : _b, _c = options.copyOptions, copyOptions = _c === void 0 ? {} : _c, _d = options.summary, summaryOptions = _d === void 0 ? {} : _d, _e = options.selectionUnit, selectionUnit = _e === void 0 ? 'cell' : _e, _f = options.showDummyRows, showDummyRows = _f === void 0 ? false : _f, _g = options.editingEvent, editingEvent = _g === void 0 ? 'dblclick' : _g, _h = options.tabMode, tabMode = _h === void 0 ? 'moveAndEdit' : _h, scrollX = options.scrollX, scrollY = options.scrollY, _j = options.useClientSort, useClientSort = _j === void 0 ? true : _j, _k = options.pageOptions, pageOptions = _k === void 0 ? {} : _k, _l = options.treeColumnOptions, treeColumnOptions = _l === void 0 ? { name: '' } : _l, _m = options.header, header = _m === void 0 ? {} : _m, _o = options.disabled, disabled = _o === void 0 ? false : _o, _p = options.draggable, draggable = _p === void 0 ? false : _p, createMenuGroups = options.contextMenu, moveDirectionOnEnter = options.moveDirectionOnEnter, _q = options.exportOptions, exportOptions = _q === void 0 ? {} : _q;
+    var el = options.el, width = options.width, rowHeight = options.rowHeight, bodyHeight = options.bodyHeight, heightResizable = options.heightResizable, minRowHeight = options.minRowHeight, minBodyHeight = options.minBodyHeight, _a = options.columnOptions, columnOptions = _a === void 0 ? {} : _a, keyColumnName = options.keyColumnName, _b = options.rowHeaders, rowHeaders = _b === void 0 ? [] : _b, _c = options.copyOptions, copyOptions = _c === void 0 ? {} : _c, _d = options.summary, summaryOptions = _d === void 0 ? {} : _d, _e = options.selectionUnit, selectionUnit = _e === void 0 ? 'cell' : _e, _f = options.showDummyRows, showDummyRows = _f === void 0 ? false : _f, _g = options.editingEvent, editingEvent = _g === void 0 ? 'dblclick' : _g, _h = options.tabMode, tabMode = _h === void 0 ? 'moveAndEdit' : _h, scrollX = options.scrollX, scrollY = options.scrollY, _j = options.useClientSort, useClientSort = _j === void 0 ? true : _j, _k = options.pageOptions, pageOptions = _k === void 0 ? {} : _k, _l = options.treeColumnOptions, treeColumnOptions = _l === void 0 ? { name: '' } : _l, _m = options.header, header = _m === void 0 ? {} : _m, _o = options.disabled, disabled = _o === void 0 ? false : _o, _p = options.draggable, draggable = _p === void 0 ? false : _p, createMenuGroups = options.contextMenu, moveDirectionOnEnter = options.moveDirectionOnEnter, _q = options.exportOptions, exportOptions = _q === void 0 ? {} : _q, _r = options.settingicon, settingicon = _r === void 0 ? false : _r;
     var frozenBorderWidth = columnOptions.frozenBorderWidth;
     var summaryHeight = summaryOptions.height, summaryPosition = summaryOptions.position;
-    var _r = header.height, headerHeight = _r === void 0 ? 40 : _r, _s = header.complexColumns, complexColumns = _s === void 0 ? [] : _s, _t = header.align, align = _t === void 0 ? 'center' : _t, _u = header.valign, valign = _u === void 0 ? 'middle' : _u, _v = header.columns, columnHeaders = _v === void 0 ? [] : _v;
+    var _s = header.height, headerHeight = _s === void 0 ? 40 : _s, _t = header.complexColumns, complexColumns = _t === void 0 ? [] : _t, _u = header.align, align = _u === void 0 ? 'center' : _u, _v = header.valign, valign = _v === void 0 ? 'middle' : _v, _w = header.columns, columnHeaders = _w === void 0 ? [] : _w;
     var column = column_1.create({
         columns: options.columns,
         columnOptions: columnOptions,
@@ -13470,6 +13470,7 @@ function createStore(id, options) {
         scrollX: scrollX,
         scrollY: scrollY,
         headerHeight: headerHeight,
+        settingicon: settingicon,
     });
     var columnCoords = columnCoords_1.create({ column: column, dimension: dimension });
     var rowCoords = rowCoords_1.create({ data: data, dimension: dimension });
@@ -19934,7 +19935,7 @@ exports.create = void 0;
 var observable_1 = __webpack_require__(5);
 var common_1 = __webpack_require__(0);
 function create(_a) {
-    var column = _a.column, _b = _a.width, width = _b === void 0 ? 'auto' : _b, domWidth = _a.domWidth, _c = _a.rowHeight, rowHeight = _c === void 0 ? 40 : _c, _d = _a.bodyHeight, bodyHeight = _d === void 0 ? 'auto' : _d, _e = _a.minRowHeight, minRowHeight = _e === void 0 ? 40 : _e, _f = _a.minBodyHeight, minBodyHeight = _f === void 0 ? 130 : _f, _g = _a.frozenBorderWidth, frozenBorderWidth = _g === void 0 ? 1 : _g, _h = _a.heightResizable, heightResizable = _h === void 0 ? false : _h, _j = _a.scrollX, scrollX = _j === void 0 ? true : _j, _k = _a.scrollY, scrollY = _k === void 0 ? true : _k, _l = _a.summaryHeight, summaryHeight = _l === void 0 ? 0 : _l, _m = _a.summaryPosition, summaryPosition = _m === void 0 ? 'bottom' : _m, _o = _a.headerHeight, headerHeight = _o === void 0 ? 40 : _o;
+    var column = _a.column, _b = _a.width, width = _b === void 0 ? 'auto' : _b, domWidth = _a.domWidth, _c = _a.rowHeight, rowHeight = _c === void 0 ? 40 : _c, _d = _a.bodyHeight, bodyHeight = _d === void 0 ? 'auto' : _d, _e = _a.minRowHeight, minRowHeight = _e === void 0 ? 40 : _e, _f = _a.minBodyHeight, minBodyHeight = _f === void 0 ? 130 : _f, _g = _a.frozenBorderWidth, frozenBorderWidth = _g === void 0 ? 1 : _g, _h = _a.heightResizable, heightResizable = _h === void 0 ? false : _h, _j = _a.scrollX, scrollX = _j === void 0 ? true : _j, _k = _a.scrollY, scrollY = _k === void 0 ? true : _k, _l = _a.summaryHeight, summaryHeight = _l === void 0 ? 0 : _l, _m = _a.summaryPosition, summaryPosition = _m === void 0 ? 'bottom' : _m, _o = _a.headerHeight, headerHeight = _o === void 0 ? 40 : _o, _p = _a.settingicon, settingicon = _p === void 0 ? false : _p;
     var bodyHeightVal = typeof bodyHeight === 'number' ? bodyHeight : 0;
     return observable_1.observable({
         offsetLeft: 0,
@@ -19957,6 +19958,7 @@ function create(_a) {
         scrollbarWidth: 17,
         tableBorderWidth: 1,
         cellBorderWidth: 1,
+        settingicon: settingicon,
         get scrollYWidth() {
             return this.scrollY ? this.scrollbarWidth : 0;
         },
@@ -20945,9 +20947,10 @@ var ContainerComp = /** @class */ (function (_super) {
     ContainerComp.prototype.render = function () {
         var _a;
         var _this = this;
-        var _b = this.props, summaryHeight = _b.summaryHeight, summaryPosition = _b.summaryPosition, heightResizable = _b.heightResizable, gridId = _b.gridId, width = _b.width, autoWidth = _b.autoWidth, scrollXHeight = _b.scrollXHeight, showLeftSide = _b.showLeftSide, scrollX = _b.scrollX, scrollY = _b.scrollY, pageOptions = _b.pageOptions;
+        var _b = this.props, summaryHeight = _b.summaryHeight, summaryPosition = _b.summaryPosition, heightResizable = _b.heightResizable, gridId = _b.gridId, width = _b.width, autoWidth = _b.autoWidth, scrollXHeight = _b.scrollXHeight, showLeftSide = _b.showLeftSide, scrollX = _b.scrollX, scrollY = _b.scrollY, pageOptions = _b.pageOptions, settingicon = _b.settingicon;
         var style = { width: autoWidth ? '100%' : width };
         var attrs = (_a = {}, _a[dom_1.dataAttr.GRID_ID] = gridId, _a);
+        console.info('container render', this.props);
         return (preact_1.h("div", tslib_1.__assign({}, attrs, { style: style, class: dom_1.cls('container', [showLeftSide, 'show-lside-area']), 
             // onMouseDown={this.handleMouseDown}
             onDblClick: this.handleDblClick, onClick: this.handleClick, onMouseOut: this.handleMouseout, onMouseOver: this.handleMouseover, onTouchStart: this.handleTouchStart, onTouchMove: this.handleTouchMove, onTouchEnd: this.handleTouchEnd, onContextMenu: this.handleContextMenu, ref: function (el) {
@@ -20966,7 +20969,8 @@ var ContainerComp = /** @class */ (function (_super) {
             preact_1.h(clipboard_1.Clipboard, null),
             pageOptions.position === 'bottom' && preact_1.h(pagination_1.Pagination, null),
             preact_1.h(filterLayer_1.FilterLayer, null),
-            preact_1.h(contextMenu_1.ContextMenu, null)));
+            preact_1.h(contextMenu_1.ContextMenu, null),
+            settingicon && preact_1.h("div", { className: 'tui-setting' })));
     };
     return ContainerComp;
 }(preact_1.Component));
@@ -20992,6 +20996,7 @@ exports.Container = hoc_1.connect(function (_a) {
         scrollX: dimension.scrollX,
         scrollY: dimension.scrollY,
         renderState: renderState,
+        settingicon: dimension.settingicon,
         focusedRowKey: focus.rowKey,
         focusedColumnName: focus.columnName,
         offsetLeft: dimension.offsetLeft,
