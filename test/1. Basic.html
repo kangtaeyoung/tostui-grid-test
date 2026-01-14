@@ -36,20 +36,337 @@
    }
     </style>
   <script type="text/babel" class="code-js">
+      var gridData2 = [
+    {
+        "name": "Beautiful Lies",
+        "artist": "Birdy",
+        "type": "Deluxe",
+        "release": "2016.03.26",
+        "genre": "Pop",
+        "rowSpanMap": {
+            "name": {
+                "mainRow": true,
+                "mainRowKey": 0,
+                "count": 3,
+                "spanCount": 3
+            },
+            "artist": {
+                "mainRow": true,
+                "mainRowKey": 0,
+                "count": 2,
+                "spanCount": 2
+            },
+            "type": {
+                "mainRow": true,
+                "mainRowKey": 0,
+                "count": 2,
+                "spanCount": 2
+            }
+        }
+    },
+    {
+        "name": "Beautiful Lies",
+        "artist": "Birdy",
+        "type": "Deluxe",
+        "release": "2014.06.24",
+        "genre": "Pop",
+        "rowSpanMap": {
+            "name": {
+                "mainRow": false,
+                "mainRowKey": 0,
+                "count": -1,
+                "spanCount": 3
+            },
+            "artist": {
+                "mainRow": false,
+                "mainRowKey": 0,
+                "count": -1,
+                "spanCount": 2
+            },
+            "type": {
+                "mainRow": false,
+                "mainRowKey": 0,
+                "count": -1,
+                "spanCount": 2
+            }
+        }
+    },
+    {
+        "name": "Beautiful Lies",
+        "artist": "Maroon5",
+        "type": "Single",
+        "release": "2011.08.08",
+        "genre": "Pop,Rock",
+        "rowSpanMap": {
+            "name": {
+                "mainRow": false,
+                "mainRowKey": 0,
+                "count": -1,
+                "spanCount": 3
+            }
+        }
+    },
+    {
+        "name": "A Head Full Of Dreams",
+        "artist": "Maroon5",
+        "type": "Deluxe",
+        "release": "2015.12.04",
+        "genre": "Rock",
+        "rowSpanMap": {
+            "name": {
+                "mainRow": true,
+                "mainRowKey": 3,
+                "count": 3,
+                "spanCount": 3
+            },
+            "artist": {
+                "mainRow": true,
+                "mainRowKey": 3,
+                "count": 3,
+                "spanCount": 3
+            },
+            "type": {
+                "mainRow": true,
+                "mainRowKey": 3,
+                "count": 3,
+                "spanCount": 3
+            },
+            "release": {
+                "mainRow": true,
+                "mainRowKey": 3,
+                "count": 3,
+                "spanCount": 3
+            },
+            "genre": {
+                "mainRow": true,
+                "mainRowKey": 3,
+                "count": 2,
+                "spanCount": 2
+            }
+        }
+    },
+    {
+        "name": "A Head Full Of Dreams",
+        "artist": "Maroon5",
+        "type": "Deluxe",
+        "release": "2015.12.04",
+        "genre": "Rock",
+        "rowSpanMap": {
+            "name": {
+                "mainRow": false,
+                "mainRowKey": 3,
+                "count": -1,
+                "spanCount": 3
+            },
+            "artist": {
+                "mainRow": false,
+                "mainRowKey": 3,
+                "count": -1,
+                "spanCount": 3
+            },
+            "type": {
+                "mainRow": false,
+                "mainRowKey": 3,
+                "count": -1,
+                "spanCount": 3
+            },
+            "release": {
+                "mainRow": false,
+                "mainRowKey": 3,
+                "count": -1,
+                "spanCount": 3
+            },
+            "genre": {
+                "mainRow": false,
+                "mainRowKey": 3,
+                "count": -1,
+                "spanCount": 2
+            }
+        }
+    },
+    {
+        "name": "A Head Full Of Dreams",
+        "artist": "Maroon5",
+        "type": "Deluxe",
+        "release": "2015.12.04",
+        "genre": "LaRock",
+        "rowSpanMap": {
+            "name": {
+                "mainRow": false,
+                "mainRowKey": 3,
+                "count": -1,
+                "spanCount": 3
+            },
+            "artist": {
+                "mainRow": false,
+                "mainRowKey": 3,
+                "count": -1,
+                "spanCount": 3
+            },
+            "type": {
+                "mainRow": false,
+                "mainRowKey": 3,
+                "count": -1,
+                "spanCount": 3
+            },
+            "release": {
+                "mainRow": false,
+                "mainRowKey": 3,
+                "count": -1,
+                "spanCount": 3
+            }
+        }
+    },
+    {
+        "name": "21",
+        "artist": "Maroon5",
+        "type": "Deluxe",
+        "release": "2011.01.21",
+        "genre": "Pop,R&B",
+        "rowSpanMap": {}
+    },
+    {
+        "name": "Warm On A Cold Night",
+        "artist": "HONNE",
+        "type": "EP",
+        "release": "2016.07.22",
+        "genre": "R&B,Electronic",
+        "rowSpanMap": {}
+    },
+    {
+        "name": "Take Me To The Alley",
+        "artist": "Gregory Porter",
+        "type": "Deluxe",
+        "release": "2016.09.02",
+        "genre": "Jazz",
+        "rowSpanMap": {}
+    },
+    {
+        "name": "Make Out",
+        "artist": "LANY",
+        "type": "EP",
+        "release": "2015.12.11",
+        "genre": "Electronic",
+        "rowSpanMap": {}
+    },
+    {
+        "name": "Get Lucky",
+        "artist": "Daft Punk",
+        "type": "Single",
+        "release": "2013.04.23",
+        "genre": "Pop,Funk",
+        "rowSpanMap": {}
+    },
+    {
+        "name": "Valtari",
+        "artist": "Sigur Rós",
+        "type": "EP",
+        "release": "2012.05.31",
+        "genre": "Rock",
+        "rowSpanMap": {}
+    },
+    {
+        "name": "Bush",
+        "artist": "Snoop Dogg",
+        "type": "EP",
+        "release": "2015.05.12",
+        "genre": "Hiphop",
+        "rowSpanMap": {}
+    },
+    {
+        "name": "2",
+        "artist": "Beyoncé",
+        "type": "Deluxe",
+        "release": "2011.07.26",
+        "genre": "Pop",
+        "rowSpanMap": {}
+    },
+    {
+        "name": "I Won't Give Up",
+        "artist": "Jason Mraz",
+        "type": "Single",
+        "release": "2012.01.03",
+        "genre": "Pop",
+        "rowSpanMap": {}
+    },
+    {
+        "name": "Following My Intuition",
+        "artist": "Craig David",
+        "type": "Deluxe",
+        "release": "2016.10.01",
+        "genre": "R&B,Electronic",
+        "rowSpanMap": {}
+    },
+    {
+        "name": "Blue Skies",
+        "artist": "Lenka",
+        "type": "Single",
+        "release": "2015.03.18",
+        "genre": "Pop,Rock",
+        "rowSpanMap": {}
+    },
+    {
+        "name": "This Is Acting",
+        "artist": "Sia",
+        "type": "EP",
+        "release": "2016.10.22",
+        "genre": "Pop",
+        "rowSpanMap": {}
+    },
+    {
+        "name": "Blurryface",
+        "artist": "Twenty One Pilots",
+        "type": "EP",
+        "release": "2015.05.19",
+        "genre": "Rock",
+        "rowSpanMap": {}
+    },
+    {
+        "name": "I'm Not The Only One",
+        "artist": "Sam Smith",
+        "type": "Single",
+        "release": "2014.09.15",
+        "genre": "Pop,R&B",
+        "rowSpanMap": {}
+    },
+    {
+        "name": "The Magic Whip",
+        "artist": "Blur",
+        "type": "EP",
+        "release": "2015.04.27",
+        "genre": "Rock",
+        "rowSpanMap": {}
+    },
+    {
+        "name": "Chaos And The Calm",
+        "artist": "James Bay",
+        "type": "EP",
+        "release": "2015.03.23",
+        "genre": "Pop,Rock",
+        "rowSpanMap": {}
+    }
+];
+
+
+
     const grid = new tui.Grid({
       el: document.getElementById('grid'),
-      data: gridData,
+      data: gridData2,
       scrollX: false,
       scrollY: true,
       bodyHeight: 400,
       settingicon: (e)=>{
         alert('Setting icon clicked!', e);
       } ,
+      onGridMounted : (e)=>{
+        console.log('Grid mounted', e.instance);
+      },  
       rowHeaders: ['rowNum', 'checkbox'],
       columns: [
         {
           header: 'Name',
-          name: 'name'
+          name: 'name',
+		  resizable: true,
         },
         {
           header: 'Artist',
@@ -57,7 +374,7 @@
         },
         {
           header: 'Type',
-          name: 'type'
+          name: 'type', 
         },
         {
           header: 'Release',
@@ -69,6 +386,8 @@
         }
       ]
     });
+
+  
   </script>
 
 </body></html>

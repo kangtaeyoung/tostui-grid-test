@@ -122,7 +122,11 @@ export function updateMainRowSpan(data: Row[], mainRow: Row, rowSpan: RowSpanAtt
 
       rowSpanMap[columnName] = createRowSpan(true, rowKey, spanCount, spanCount);
       updateSubRowSpan(data, mainRow, columnName, 1, spanCount);
+
+        console.info('rowSpanMap', columnName,mainRow, data);
     });
+
+  
   }
 }
 

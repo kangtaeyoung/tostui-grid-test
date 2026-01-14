@@ -1,6 +1,6 @@
 /*!
  * TOAST UI Grid
- * @version 4.21.22 | Thu Dec 25 2025
+ * @version 4.21.22 | Wed Jan 14 2026
  * @author NHN Cloud. FE Development Lab
  * @license MIT
  */
@@ -5374,6 +5374,7 @@ function updateMainRowSpan(data, mainRow, rowSpan) {
             var spanCount = rowSpan[columnName];
             rowSpanMap_1[columnName] = data_1.createRowSpan(true, rowKey_1, spanCount, spanCount);
             updateSubRowSpan(data, mainRow, columnName, 1, spanCount);
+            console.info('rowSpanMap', columnName, mainRow, data);
         });
     }
 }
@@ -6631,8 +6632,14 @@ function getCellWidthToBeResized(columns, range, resizeAmount, startWidths) {
     for (var idx = 0; idx < rangeLength; idx += 1) {
         var columnIdx = startIdx + idx;
         var minWidth = columns[columnIdx].minWidth;
-        var width = Math.max(startWidths[idx] + delta, minWidth);
-        widths.push(width);
+        var newWidth = 20;
+        if (startWidths[idx] + delta > 20) {
+            newWidth = startWidths[idx] + delta;
+        }
+        columns[columnIdx].minWidth = newWidth;
+        widths.push(newWidth);
+        // const width = Math.max(startWidths[idx] + delta, minWidth);
+        // widths.push(width);
     }
     return widths;
 }
@@ -21668,6 +21675,7 @@ var RowSpanCellComp = /** @class */ (function (_super) {
             if (!rowSpan.mainRow) {
                 return null;
             }
+            console.info('spanCount', columnInfo, rowSpan.spanCount);
             rowSpanAttr = { rowSpan: rowSpan.spanCount };
         }
         return (preact_1.h(bodyCell_1.BodyCell, { viewRow: viewRow, columnInfo: columnInfo, refreshRowHeight: refreshRowHeight, rowSpanAttr: rowSpanAttr, rowIndex: rowIndex }));
@@ -21681,6 +21689,7 @@ exports.RowSpanCell = hoc_1.connect(function (_a, _b) {
     var sortState = data.sortState;
     var rowSpan = (viewRow.rowSpanMap && viewRow.rowSpanMap[columnInfo.name]) || null;
     var enableRowSpan = rowSpan_1.isRowSpanEnabled(sortState, column);
+    console.info('rowSpan', columnInfo, rowSpan, enableRowSpan);
     return { rowSpan: rowSpan, enableRowSpan: enableRowSpan };
 })(RowSpanCellComp);
 

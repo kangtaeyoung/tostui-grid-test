@@ -29,6 +29,7 @@ export class RowSpanCellComp extends Component<Props> {
       if (!rowSpan.mainRow) {
         return null;
       }
+      console.info('spanCount', columnInfo, rowSpan.spanCount);
       rowSpanAttr = { rowSpan: rowSpan.spanCount };
     }
 
@@ -49,7 +50,7 @@ export const RowSpanCell = connect<StoreProps, OwnProps>(
     const { sortState } = data;
     const rowSpan = (viewRow.rowSpanMap && viewRow.rowSpanMap[columnInfo.name]) || null;
     const enableRowSpan = isRowSpanEnabled(sortState, column);
-
+    console.info('rowSpan', columnInfo, rowSpan, enableRowSpan);  
     return { rowSpan, enableRowSpan };
   }
 )(RowSpanCellComp);
