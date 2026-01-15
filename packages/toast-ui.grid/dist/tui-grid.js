@@ -1,6 +1,6 @@
 /*!
  * TOAST UI Grid
- * @version 4.21.22 | Wed Jan 14 2026
+ * @version 4.21.22 | Thu Jan 15 2026
  * @author NHN Cloud. FE Development Lab
  * @license MIT
  */
@@ -5814,8 +5814,8 @@ function sortData(store) {
         data.viewData = targetViewData.concat(viewData.slice(pageRowRange[1]));
     }
     else {
-        rawData.sort(sort_1.sortRawData(sortedColumns));
-        data.viewData = createSortedViewData(rawData);
+        // rawData.sort(sortRawData(sortedColumns));
+        // data.viewData = createSortedViewData(rawData);
     }
     var rowKeysInViewport = viewport.rows.map(function (_a) {
         var rowKey = _a.rowKey;

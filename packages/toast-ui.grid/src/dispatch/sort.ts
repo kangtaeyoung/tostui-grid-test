@@ -38,8 +38,8 @@ function sortData(store: Store) {
     data.rawData = targetRawData.concat(rawData.slice(pageRowRange[1]));
     data.viewData = targetViewData.concat(viewData.slice(pageRowRange[1]));
   } else {
-    rawData.sort(sortRawData(sortedColumns));
-    data.viewData = createSortedViewData(rawData);
+    // rawData.sort(sortRawData(sortedColumns));
+    // data.viewData = createSortedViewData(rawData);
   }
 
   const rowKeysInViewport = viewport.rows.map(({ rowKey }) => rowKey);
